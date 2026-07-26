@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { Menu, X } from 'lucide-react';
+import { Menu, X, Download } from 'lucide-react';
 import { siteConfig } from '../../data/config';
 
 interface NavbarProps {
@@ -60,6 +60,20 @@ export const Navbar: React.FC<NavbarProps> = ({ activeSection }) => {
           })}
         </nav>
 
+        {/* Desktop Header CTA Button (Download CV) */}
+        <div className="hidden lg:flex items-center gap-4">
+          <a
+            href={siteConfig.cvUrl || '/CV_Muhammad_Bahrul_Widad.pdf'}
+            download="CV_Muhammad_Bahrul_Widad.pdf"
+            target="_blank"
+            rel="noreferrer"
+            className="px-5 py-2.5 rounded-full bg-white text-slate-950 font-bold text-xs hover:bg-emerald-400 hover:scale-105 transition-all shadow-sm flex items-center gap-2"
+          >
+            <span>Download CV</span>
+            <Download className="w-3.5 h-3.5" />
+          </a>
+        </div>
+
         {/* Mobile Menu Toggle */}
         <div className="flex items-center gap-4 lg:hidden">
           <button
@@ -87,13 +101,15 @@ export const Navbar: React.FC<NavbarProps> = ({ activeSection }) => {
               </a>
             ))}
             <a
-              href={siteConfig.socials.whatsapp}
+              href={siteConfig.cvUrl || '/CV_Muhammad_Bahrul_Widad.pdf'}
+              download="CV_Muhammad_Bahrul_Widad.pdf"
               target="_blank"
               rel="noreferrer"
               onClick={() => setMobileMenuOpen(false)}
-              className="mt-4 px-6 py-3 rounded-full bg-white text-slate-950 text-center font-semibold text-sm hover:bg-emerald-400 transition-all shadow-md"
+              className="mt-4 px-6 py-3 rounded-full bg-white text-slate-950 text-center font-semibold text-sm hover:bg-emerald-400 transition-all shadow-md flex items-center justify-center gap-2"
             >
-              Konsultasi via WhatsApp
+              <span>Download CV</span>
+              <Download className="w-4 h-4" />
             </a>
           </nav>
         </div>

@@ -12,6 +12,7 @@ export interface SiteConfig {
   location: string;
   availableForFreelance: boolean;
   availabilityText: string;
+  cvUrl?: string;
   socials: {
     github: string;
     linkedin: string;
@@ -30,7 +31,7 @@ export const siteConfig: SiteConfig = {
   name: "Muhammad Bahrul Widad",
   shortName: "MBW",
   role: "Full-Stack Web Developer & UI/UX Designer",
-  tagline: "Transforming your business vision into high-performance, futuristic digital experiences using Next.js and modern tech stacks.",
+  tagline: "Specializing in React, Next.js, and robust backend systems to build scalable web applications that help businesses launch faster and deliver clean user experiences.",
   shortBio: "Premium digital craftsmanship for the next generation of deep-tech and SaaS ventures.",
   fullBio: "Saya adalah mahasiswa S1 Sistem Informasi di Universitas Negeri Semarang (UNNES). Berfokus pada pengembangan web modern, saya menggabungkan ketajaman teknis dengan minat mendalam pada desain UI/UX untuk menciptakan solusi digital yang tidak hanya fungsional, tetapi juga estetis.",
   university: "Universitas Negeri Semarang (UNNES)",
@@ -40,6 +41,7 @@ export const siteConfig: SiteConfig = {
   location: "Gunungpati, Semarang, Indonesia",
   availableForFreelance: true,
   availabilityText: "Available for Q4 Projects",
+  cvUrl: "/CV_Muhammad_Bahrul_Widad.pdf",
   socials: {
     github: "https://github.com/bahrulwd",
     linkedin: "https://www.linkedin.com/in/muhammadbahrulwidad/",

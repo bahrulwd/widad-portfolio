@@ -159,8 +159,15 @@ export const Portfolio: React.FC = () => {
                     <h3 className="text-2xl sm:text-3xl font-extrabold text-white mb-3 group-hover:text-emerald-400 transition-colors duration-300">
                       {project.title}
                     </h3>
+
+                    {/* Result / Impact Highlight Pill */}
+                    <div className="mb-4 inline-flex items-center gap-2 px-3 py-1.5 rounded-lg bg-[#0E0E0E] border border-emerald-500/30 text-xs font-mono text-emerald-400">
+                      <span className="font-bold uppercase tracking-wider">Result:</span>
+                      <span className="text-slate-200">{project.result}</span>
+                    </div>
+
                     <p className="text-slate-400 text-xs sm:text-sm mb-6 leading-relaxed line-clamp-2">
-                      {project.description}
+                      <strong className="text-slate-300 font-semibold">Problem:</strong> {project.problem}
                     </p>
 
                     {/* Interactive Tech Stack Tags */}
@@ -182,7 +189,7 @@ export const Portfolio: React.FC = () => {
                       onClick={() => setActiveModalProject(project)}
                       className="text-xs font-bold text-slate-300 group-hover:text-white flex items-center gap-1.5 transition-colors font-mono tracking-wider"
                     >
-                      <span>Lihat Detail Studi Kasus</span>
+                      <span>Studi Kasus Lengkap</span>
                       <ArrowUpRight className="w-4 h-4 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform" />
                     </button>
 
@@ -291,9 +298,12 @@ export const Portfolio: React.FC = () => {
 
             {/* Modal Body Scroll Area */}
             <div className="p-6 sm:p-8 overflow-y-auto space-y-6">
-              <h2 className="text-2xl sm:text-4xl font-extrabold text-white tracking-tight">
-                {activeModalProject.title}
-              </h2>
+              <div>
+                <span className="text-xs font-mono uppercase tracking-widest text-slate-400 block mb-1">Studi Kasus Proyek</span>
+                <h2 className="text-2xl sm:text-4xl font-extrabold text-white tracking-tight">
+                  {activeModalProject.title}
+                </h2>
+              </div>
 
               {/* Project Main Image */}
               <div className="rounded-2xl overflow-hidden border border-[#333333] bg-slate-950 aspect-[16/9]">
@@ -304,10 +314,45 @@ export const Portfolio: React.FC = () => {
                 />
               </div>
 
+              {/* Executive Case Study Breakdown (Problem - Solution - Result) */}
+              <div className="grid grid-cols-1 gap-4 pt-2">
+                <div className="p-5 rounded-xl bg-[#141414] border border-white/5">
+                  <span className="text-xs font-bold font-mono text-red-400 uppercase tracking-wider block mb-1.5">
+                    Problem (Tantangan Klien)
+                  </span>
+                  <p className="text-xs sm:text-sm text-slate-300 leading-relaxed">
+                    {activeModalProject.problem}
+                  </p>
+                </div>
+
+                <div className="p-5 rounded-xl bg-[#141414] border border-white/5">
+                  <span className="text-xs font-bold font-mono text-blue-400 uppercase tracking-wider block mb-1.5">
+                    Solution (Solusi Arsitektur)
+                  </span>
+                  <p className="text-xs sm:text-sm text-slate-300 leading-relaxed">
+                    {activeModalProject.solution}
+                  </p>
+                </div>
+
+                <div className="p-5 rounded-xl bg-[#141414] border border-emerald-500/20 bg-emerald-500/5">
+                  <span className="text-xs font-bold font-mono text-emerald-400 uppercase tracking-wider block mb-1.5">
+                    Result & Business Impact (Hasil Terukur)
+                  </span>
+                  <p className="text-xs sm:text-sm text-emerald-300 font-semibold leading-relaxed">
+                    {activeModalProject.result}
+                  </p>
+                </div>
+              </div>
+
               {/* Project Description */}
-              <p className="text-slate-300 text-sm sm:text-base leading-relaxed">
-                {activeModalProject.longDescription}
-              </p>
+              <div className="space-y-2">
+                <span className="text-xs font-mono uppercase text-slate-400 tracking-wider font-semibold block">
+                  Detail ImplementasiTeknis:
+                </span>
+                <p className="text-slate-300 text-xs sm:text-sm leading-relaxed">
+                  {activeModalProject.longDescription}
+                </p>
+              </div>
 
               {/* Tech Stack Pills */}
               <div className="space-y-3 pt-2">

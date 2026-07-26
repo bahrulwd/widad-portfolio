@@ -71,8 +71,8 @@ export const Hero: React.FC = () => {
         animate="visible"
         className="relative z-10 max-w-[1440px] mx-auto flex flex-col items-center text-center w-full"
       >
-        {/* 1. Eyebrow Badge */}
-        <motion.div variants={itemVariants} className="mb-8 inline-flex items-center gap-2.5">
+        {/* 1. Eyebrow Badge & Currently Building Pill */}
+        <motion.div variants={itemVariants} className="mb-8 flex flex-wrap items-center justify-center gap-3">
           <div className="inline-flex items-center gap-2.5 px-4 py-1.5 rounded-full bg-[#1A1A1A] border border-[#333333] hover:border-white/30 transition-colors shadow-sm">
             <span className="relative flex h-2 w-2">
               <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75" />
@@ -81,6 +81,14 @@ export const Hero: React.FC = () => {
             <span className="text-xs font-semibold text-slate-300 uppercase tracking-widest font-mono">
               {siteConfig.availabilityText}
             </span>
+          </div>
+
+          <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-[#1A1A1A]/90 border border-emerald-500/30 text-xs font-mono text-slate-300 shadow-sm">
+            <span className="text-emerald-400 font-bold uppercase tracking-wider flex items-center gap-1.5">
+              <span className="h-1.5 w-1.5 rounded-full bg-emerald-400 animate-pulse" />
+              Currently Building:
+            </span>
+            <span className="text-slate-200 font-medium">Nexa (Productivity OS) & Custom CMS</span>
           </div>
         </motion.div>
 
@@ -125,6 +133,21 @@ export const Hero: React.FC = () => {
             <span>Lihat Profil Professional</span>
             <ArrowUpRight className="w-4 h-4 text-slate-400 group-hover:text-white transition-colors" />
           </a>
+        </motion.div>
+
+        {/* Trust & Guarantee Micro-Signals (Conversion Booster) */}
+        <motion.div variants={itemVariants} className="mt-6 flex flex-wrap items-center justify-center gap-4 sm:gap-6 text-xs text-slate-400 font-mono">
+          <span className="flex items-center gap-1.5">
+            <span className="text-emerald-400 font-bold">✓</span> Respon Cepat (&lt; 24 Jam)
+          </span>
+          <span className="hidden sm:inline text-slate-600">•</span>
+          <span className="flex items-center gap-1.5">
+            <span className="text-emerald-400 font-bold">✓</span> Arsitektur Clean & Type-Safe
+          </span>
+          <span className="hidden sm:inline text-slate-600">•</span>
+          <span className="flex items-center gap-1.5">
+            <span className="text-emerald-400 font-bold">✓</span> On-Time Delivery
+          </span>
         </motion.div>
 
         {/* 5. Bento Cards & Tech Ribbon */}
