@@ -29,7 +29,7 @@ export interface SiteConfig {
 export const siteConfig: SiteConfig = {
   name: "Muhammad Bahrul Widad",
   shortName: "MBW",
-  role: "Expert Web Developer & Tech Consultant",
+  role: "Full-Stack Web Developer & UI/UX Designer",
   tagline: "Transforming your business vision into high-performance, futuristic digital experiences using Next.js and modern tech stacks.",
   shortBio: "Premium digital craftsmanship for the next generation of deep-tech and SaaS ventures.",
   fullBio: "Saya adalah mahasiswa S1 Sistem Informasi di Universitas Negeri Semarang (UNNES). Berfokus pada pengembangan web modern, saya menggabungkan ketajaman teknis dengan minat mendalam pada desain UI/UX untuk menciptakan solusi digital yang tidak hanya fungsional, tetapi juga estetis.",

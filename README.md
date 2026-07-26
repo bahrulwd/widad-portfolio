@@ -10,7 +10,7 @@ Website ini dibangun untuk merepresentasikan identitas profesional **Muhammad Ba
 
 ### 👤 Profile Brief
 - **Nama**: Muhammad Bahrul Widad
-- **Peran**: Expert Web Developer & Tech Consultant
+- **Peran**: Full-Stack Web Developer & UI/UX Designer
 - **Pendidikan**: S1 Sistem Informasi — Universitas Negeri Semarang (UNNES)
 - **Lokasi**: Gunungpati, Semarang, Indonesia
 - **Email**: `bahrulwidad.work@gmail.com`
