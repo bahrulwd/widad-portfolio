@@ -14,7 +14,7 @@ Website ini dibangun untuk merepresentasikan identitas profesional **Muhammad Ba
 - **Pendidikan**: S1 Sistem Informasi — Universitas Negeri Semarang (UNNES)
 - **Lokasi**: Gunungpati, Semarang, Indonesia
 - **Email**: `bahrulwidad.work@gmail.com`
-- **Telepon / WA**: `+62 852 3664 4697`
+- **Telepon / WA**: `+62 821 4796 7841`
 - **Socials**: [LinkedIn](https://www.linkedin.com/in/muhammadbahrulwidad/) | [GitHub](https://github.com/bahrulwd) | [Instagram](https://www.instagram.com/bhrlwidadd/)
 
 ---

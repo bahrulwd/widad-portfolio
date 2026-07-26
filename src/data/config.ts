@@ -36,7 +36,7 @@ export const siteConfig: SiteConfig = {
   university: "Universitas Negeri Semarang (UNNES)",
   major: "S1 Sistem Informasi",
   email: "bahrulwidad.work@gmail.com",
-  phone: "+62 852 3664 4697",
+  phone: "+62 821 4796 7841",
   location: "Gunungpati, Semarang, Indonesia",
   availableForFreelance: true,
   availabilityText: "Available for Q4 Projects",
@@ -44,7 +44,7 @@ export const siteConfig: SiteConfig = {
     github: "https://github.com/bahrulwd",
     linkedin: "https://www.linkedin.com/in/muhammadbahrulwidad/",
     instagram: "https://www.instagram.com/bhrlwidadd/",
-    whatsapp: "https://wa.me/6285236644697?text=Halo%20Muhammad%20Bahrul%20Widad,%20saya%20ingin%20berkonsultasi%20mengenai%20proyek%20web",
+    whatsapp: "https://wa.me/6282147967841?text=Halo%20Muhammad%20Bahrul%20Widad,%20saya%20ingin%20berkonsultasi%20mengenai%20proyek%20web",
   },
   stats: [
     { label: "Projects Delivered", value: "50+", numericValue: 50 },
