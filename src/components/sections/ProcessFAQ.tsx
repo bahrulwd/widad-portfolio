@@ -35,12 +35,12 @@ export const ProcessFAQ: React.FC = () => {
           </div>
         </div>
 
-        {/* Bento Grid Workflow */}
-        <div className="grid grid-cols-1 md:grid-cols-12 gap-6 min-h-[550px]">
+        {/* Bento Grid Workflow (5 Steps) */}
+        <div className="grid grid-cols-1 md:grid-cols-12 gap-6">
 
-          {/* Step 1: Konsultasi (4 cols) */}
-          <div className="col-span-12 md:col-span-4 bg-[#201f1f] border border-[#333333] p-8 flex flex-col justify-between group hover:bg-[#2a2a2a] transition-colors duration-500 rounded-2xl">
-            <div className="flex justify-between items-start">
+          {/* Step 1: Konsultasi (6 cols) */}
+          <div className="col-span-12 md:col-span-6 bg-[#201f1f] border border-[#333333] p-6 sm:p-8 flex flex-col justify-between min-h-[200px] group hover:bg-[#2a2a2a] transition-colors duration-500 rounded-2xl">
+            <div className="flex justify-between items-start mb-6">
               <span className="text-3xl font-extrabold text-white/20 group-hover:text-white transition-colors font-mono">
                 01
               </span>
@@ -54,9 +54,9 @@ export const ProcessFAQ: React.FC = () => {
             </div>
           </div>
 
-          {/* Step 2: Perencanaan (5 cols) */}
-          <div className="col-span-12 md:col-span-5 bg-[#201f1f] border border-[#333333] p-8 flex flex-col justify-between group hover:bg-[#2a2a2a] transition-colors duration-500 rounded-2xl">
-            <div className="flex justify-between items-start">
+          {/* Step 2: Perencanaan (6 cols) */}
+          <div className="col-span-12 md:col-span-6 bg-[#201f1f] border border-[#333333] p-6 sm:p-8 flex flex-col justify-between min-h-[200px] group hover:bg-[#2a2a2a] transition-colors duration-500 rounded-2xl">
+            <div className="flex justify-between items-start mb-6">
               <span className="text-3xl font-extrabold text-white/20 group-hover:text-white transition-colors font-mono">
                 02
               </span>
@@ -70,24 +70,9 @@ export const ProcessFAQ: React.FC = () => {
             </div>
           </div>
 
-          {/* Center Decorative Image Slot (3 cols) */}
-          <div className="col-span-12 md:col-span-3 relative overflow-hidden bg-[#201f1f] border border-[#333333] rounded-2xl min-h-[220px]">
-            <div className="absolute inset-0 opacity-40 bg-gradient-to-t from-[#0e0e0e] to-transparent z-10" />
-            <img
-              src="/images/project-1.jpg"
-              alt="System Ready Setup"
-              className="absolute inset-0 w-full h-full object-cover"
-            />
-            <div className="absolute bottom-6 left-6 z-20">
-              <span className="text-xs font-mono font-bold text-white bg-white/10 backdrop-blur-md px-3.5 py-1.5 rounded-full border border-white/20">
-                SYSTEM READY
-              </span>
-            </div>
-          </div>
-
-          {/* Step 3: Pengembangan (5 cols) */}
-          <div className="col-span-12 md:col-span-5 bg-[#201f1f] border border-[#333333] p-8 flex flex-col justify-between group hover:bg-[#2a2a2a] transition-colors duration-500 rounded-2xl">
-            <div className="flex justify-between items-start">
+          {/* Step 3: Pengembangan (4 cols) */}
+          <div className="col-span-12 md:col-span-4 bg-[#201f1f] border border-[#333333] p-6 sm:p-8 flex flex-col justify-between min-h-[200px] group hover:bg-[#2a2a2a] transition-colors duration-500 rounded-2xl">
+            <div className="flex justify-between items-start mb-6">
               <span className="text-3xl font-extrabold text-white/20 group-hover:text-white transition-colors font-mono">
                 03
               </span>
@@ -101,28 +86,35 @@ export const ProcessFAQ: React.FC = () => {
             </div>
           </div>
 
-          {/* Step 4 & 5 Mini-Grid (7 cols) */}
-          <div className="col-span-12 md:col-span-7 grid grid-cols-1 sm:grid-cols-2 gap-6">
-            {/* Step 4 QC */}
-            <div className="bg-[#201f1f] border border-[#333333] p-8 flex flex-col justify-between group hover:bg-[#2a2a2a] transition-colors duration-500 rounded-2xl">
-              <span className="text-xs font-bold text-slate-400 uppercase tracking-widest font-mono group-hover:text-white transition-colors">
-                04 QC
+          {/* Step 4: Quality Control (4 cols) */}
+          <div className="col-span-12 md:col-span-4 bg-[#201f1f] border border-[#333333] p-6 sm:p-8 flex flex-col justify-between min-h-[200px] group hover:bg-[#2a2a2a] transition-colors duration-500 rounded-2xl">
+            <div className="flex justify-between items-start mb-6">
+              <span className="text-3xl font-extrabold text-white/20 group-hover:text-white transition-colors font-mono">
+                04
               </span>
-              <div className="flex items-center gap-3">
-                <CheckCircle2 className="w-6 h-6 text-emerald-400 shrink-0" />
-                <h4 className="text-xl font-bold text-white">Quality Control</h4>
-              </div>
+              <CheckCircle2 className="w-6 h-6 text-emerald-400 group-hover:scale-110 transition-transform" />
             </div>
+            <div>
+              <h3 className="text-2xl font-bold text-white mb-2">Quality Control</h3>
+              <p className="text-slate-400 text-sm leading-relaxed">
+                Pengujian ketat untuk keamanan, kecepatan, dan responsivitas di seluruh perangkat.
+              </p>
+            </div>
+          </div>
 
-            {/* Step 5 Launch */}
-            <div className="bg-white text-slate-950 p-8 flex flex-col justify-between group hover:bg-emerald-400 transition-colors duration-500 rounded-2xl shadow-xl">
-              <span className="text-xs font-bold text-slate-700 uppercase tracking-widest font-mono">
-                05 LAUNCH
+          {/* Step 5: Live Release (4 cols) */}
+          <div className="col-span-12 md:col-span-4 bg-white text-slate-950 p-6 sm:p-8 flex flex-col justify-between min-h-[200px] group hover:bg-emerald-400 transition-colors duration-500 rounded-2xl shadow-xl">
+            <div className="flex justify-between items-start mb-6">
+              <span className="text-3xl font-extrabold text-slate-950/30 group-hover:text-slate-950 transition-colors font-mono">
+                05
               </span>
-              <div className="flex items-center gap-3">
-                <Rocket className="w-6 h-6 text-slate-950 shrink-0" />
-                <h4 className="text-xl font-extrabold text-slate-950">Live Release</h4>
-              </div>
+              <Rocket className="w-6 h-6 text-slate-950 group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform" />
+            </div>
+            <div>
+              <h3 className="text-2xl font-extrabold text-slate-950 mb-2">Live Release</h3>
+              <p className="text-slate-700 text-sm leading-relaxed font-medium">
+                Peluncuran resmi ke server produksi dan pemantauan performa awal pasca-rilis.
+              </p>
             </div>
           </div>
 
