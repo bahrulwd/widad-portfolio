@@ -1,0 +1,53 @@
+export interface SiteConfig {
+  name: string;
+  shortName: string;
+  role: string;
+  tagline: string;
+  shortBio: string;
+  fullBio: string;
+  university: string;
+  major: string;
+  email: string;
+  phone: string;
+  location: string;
+  availableForFreelance: boolean;
+  availabilityText: string;
+  socials: {
+    github: string;
+    linkedin: string;
+    instagram: string;
+    twitter?: string;
+    whatsapp: string;
+  };
+  stats: {
+    label: string;
+    value: string;
+    numericValue?: number;
+  }[];
+}
+
+export const siteConfig: SiteConfig = {
+  name: "Muhammad Bahrul Widad",
+  shortName: "MBW",
+  role: "Expert Web Developer & Tech Consultant",
+  tagline: "Transforming your business vision into high-performance, futuristic digital experiences using Next.js and modern tech stacks.",
+  shortBio: "Premium digital craftsmanship for the next generation of deep-tech and SaaS ventures.",
+  fullBio: "Saya adalah mahasiswa S1 Sistem Informasi di Universitas Negeri Semarang (UNNES). Berfokus pada pengembangan web modern, saya menggabungkan ketajaman teknis dengan minat mendalam pada desain UI/UX untuk menciptakan solusi digital yang tidak hanya fungsional, tetapi juga estetis.",
+  university: "Universitas Negeri Semarang (UNNES)",
+  major: "S1 Sistem Informasi",
+  email: "bahrulwidad.work@gmail.com",
+  phone: "+62 852 3664 4697",
+  location: "Gunungpati, Semarang, Indonesia",
+  availableForFreelance: true,
+  availabilityText: "Available for Q4 Projects",
+  socials: {
+    github: "https://github.com/bahrulwd",
+    linkedin: "https://www.linkedin.com/in/muhammadbahrulwidad/",
+    instagram: "https://www.instagram.com/bhrlwidadd/",
+    whatsapp: "https://wa.me/6285236644697?text=Halo%20Muhammad%20Bahrul%20Widad,%20saya%20ingin%20berkonsultasi%20mengenai%20proyek%20web",
+  },
+  stats: [
+    { label: "Projects Delivered", value: "50+", numericValue: 50 },
+    { label: "Client Satisfaction", value: "99%", numericValue: 99 },
+  ],
+};
