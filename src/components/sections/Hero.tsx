@@ -47,7 +47,7 @@ export const Hero: React.FC = () => {
       id="hero"
       ref={containerRef}
       onMouseMove={handleMouseMove}
-      className="relative min-h-[92vh] flex items-center justify-center px-6 lg:px-8 py-24 overflow-hidden bg-[#0A0A0A] text-slate-100 selection:bg-white selection:text-slate-950"
+      className="relative min-h-[92vh] flex items-center justify-center px-4 sm:px-6 lg:px-8 py-16 sm:py-24 overflow-hidden bg-[#0A0A0A] text-slate-100 selection:bg-white selection:text-slate-950"
     >
       {/* Interactive Cursor Spotlight Background */}
       <div
@@ -87,7 +87,7 @@ export const Hero: React.FC = () => {
         {/* 2. H1 Headline */}
         <motion.h1
           variants={itemVariants}
-          className="font-extrabold text-white text-4xl sm:text-6xl lg:text-[86px] max-w-5xl mb-8 tracking-tighter leading-[0.95]"
+          className="font-extrabold text-white text-3xl sm:text-6xl lg:text-[86px] max-w-5xl mb-8 tracking-tighter leading-[0.98]"
         >
           {siteConfig.name} —{" "}
           <span className="text-slate-400 font-semibold">{siteConfig.role}</span>
@@ -96,7 +96,7 @@ export const Hero: React.FC = () => {
         {/* 3. Subheadline */}
         <motion.p
           variants={itemVariants}
-          className="text-slate-400 text-lg sm:text-xl max-w-2xl mb-12 opacity-85 leading-relaxed font-normal"
+          className="text-slate-400 text-base sm:text-xl max-w-2xl mb-12 opacity-85 leading-relaxed font-normal"
         >
           {siteConfig.tagline}
         </motion.p>
@@ -130,10 +130,10 @@ export const Hero: React.FC = () => {
         {/* 5. Bento Cards & Tech Ribbon */}
         <motion.div
           variants={itemVariants}
-          className="mt-20 pt-12 border-t border-[#333333]/80 w-full flex flex-col items-center"
+          className="mt-16 sm:mt-20 pt-10 sm:pt-12 border-t border-[#333333]/80 w-full flex flex-col items-center"
         >
           {/* Bento Stats / Metric Pills */}
-          <div className="grid grid-cols-2 sm:grid-cols-4 gap-4 w-full max-w-3xl mb-12">
+          <div className="grid grid-cols-2 sm:grid-cols-4 gap-3 sm:gap-4 w-full max-w-3xl mb-12">
             {[
               { label: "Projects Delivered", val: "50+" },
               { label: "Client Satisfaction", val: "99%" },
@@ -142,12 +142,12 @@ export const Hero: React.FC = () => {
             ].map((card, idx) => (
               <div
                 key={idx}
-                className="p-4 rounded-xl bg-[#1A1A1A] border border-[#333333] hover:border-white/30 hover:-translate-y-1 transition-all duration-300 flex flex-col items-center justify-center cursor-pointer shadow-md"
+                className="p-3.5 sm:p-4 rounded-xl bg-[#1A1A1A] border border-[#333333] hover:border-white/30 hover:-translate-y-1 transition-all duration-300 flex flex-col items-center justify-center cursor-pointer shadow-md"
               >
-                <span className="text-xl sm:text-2xl font-extrabold text-white tracking-tight">
+                <span className="text-lg sm:text-2xl font-extrabold text-white tracking-tight">
                   {card.val}
                 </span>
-                <span className="text-[11px] text-slate-400 font-mono mt-1 uppercase tracking-wider">
+                <span className="text-[10px] sm:text-[11px] text-slate-400 font-mono mt-1 uppercase tracking-wider text-center">
                   {card.label}
                 </span>
               </div>
@@ -158,13 +158,13 @@ export const Hero: React.FC = () => {
             Trusted Technologies
           </span>
 
-          <div className="flex flex-wrap justify-center items-center gap-8 sm:gap-14 opacity-60 hover:opacity-100 transition-all duration-500">
+          <div className="flex flex-wrap justify-center items-center gap-4 sm:gap-14 opacity-60 hover:opacity-100 transition-all duration-500">
             {techStack.map((tech) => (
               <div
                 key={tech}
-                className="px-4 py-2 rounded-lg border border-transparent hover:border-[#333333] hover:bg-[#1A1A1A] hover:-translate-y-0.5 transition-all duration-300 cursor-pointer"
+                className="px-3 py-1.5 sm:px-4 sm:py-2 rounded-lg border border-transparent hover:border-[#333333] hover:bg-[#1A1A1A] hover:-translate-y-0.5 transition-all duration-300 cursor-pointer"
               >
-                <span className="text-lg sm:text-xl font-bold text-white tracking-tighter italic font-mono">
+                <span className="text-base sm:text-xl font-bold text-white tracking-tighter italic font-mono">
                   {tech}
                 </span>
               </div>

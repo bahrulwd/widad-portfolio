@@ -20,17 +20,17 @@ export const Services: React.FC = () => {
     <section id="layanan" className="w-full bg-[#0e0e0e] text-slate-100">
 
       {/* 1. Services Catalog & Bento Grid */}
-      <div className="max-w-[1440px] mx-auto px-6 lg:px-8 py-24 w-full">
+      <div className="max-w-[1440px] mx-auto px-4 sm:px-6 lg:px-8 py-16 sm:py-24 w-full">
         {/* Section Header */}
-        <div className="flex flex-col md:flex-row justify-between items-end gap-8 mb-20">
+        <div className="flex flex-col md:flex-row justify-between items-start md:items-end gap-6 sm:gap-8 mb-12 sm:mb-20">
           <div className="max-w-3xl">
             <span className="text-xs font-semibold uppercase tracking-[0.3em] text-slate-400 mb-4 block font-mono">
               Katalog Solusi
             </span>
-            <h2 className="text-4xl sm:text-6xl font-extrabold text-white mb-6 tracking-tight">
+            <h2 className="text-3xl sm:text-6xl font-extrabold text-white mb-4 sm:mb-6 tracking-tight">
               Layanan Profesional
             </h2>
-            <p className="text-slate-400 text-lg sm:text-xl leading-relaxed font-normal">
+            <p className="text-slate-400 text-base sm:text-xl leading-relaxed font-normal">
               Solusi digital end-to-end untuk kebutuhan bisnis dan personal Anda, dirancang dengan presisi teknis dan estetika tinggi.
             </p>
           </div>
@@ -41,7 +41,7 @@ export const Services: React.FC = () => {
         <div className="grid grid-cols-1 md:grid-cols-12 gap-6">
 
           {/* Landing Page (8 cols) */}
-          <div className="md:col-span-8 group relative overflow-hidden bg-[#1A1A1A] border border-[#333333] p-8 sm:p-10 flex flex-col justify-between min-h-[380px] hover:border-white/30 transition-all duration-500 rounded-2xl">
+          <div className="md:col-span-8 group relative overflow-hidden bg-[#1A1A1A] border border-[#333333] p-6 sm:p-10 flex flex-col justify-between min-h-[300px] sm:min-h-[380px] hover:border-white/30 transition-all duration-500 rounded-2xl">
             <div className="flex justify-between items-start">
               <div>
                 <span className="px-3.5 py-1 rounded-full border border-white/20 text-xs font-mono text-slate-300 uppercase tracking-wider mb-6 inline-block">

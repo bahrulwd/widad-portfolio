@@ -8,8 +8,8 @@ export const Footer: React.FC = () => {
   };
 
   return (
-    <footer id="kontak" className="w-full bg-[#1A1A1A] border-t border-[#333333] pt-24 pb-12 text-slate-100">
-      <div className="max-w-[1440px] mx-auto px-6 lg:px-8">
+    <footer id="kontak" className="w-full bg-[#1A1A1A] border-t border-[#333333] pt-16 sm:pt-24 pb-8 sm:pb-12 text-slate-100">
+      <div className="max-w-[1440px] mx-auto px-4 sm:px-6 lg:px-8">
 
         {/* Main Footer Grid */}
         <div className="grid grid-cols-1 md:grid-cols-12 gap-12 mb-24">

@@ -30,13 +30,13 @@ export const Navbar: React.FC<NavbarProps> = ({ activeSection }) => {
 
   return (
     <header className="fixed top-0 left-0 w-full z-[100] bg-[#0e0e0e]/75 backdrop-blur-xl border-b border-white/5 transition-all duration-300">
-      <div className="max-w-[1440px] mx-auto h-20 px-6 lg:px-8 flex items-center justify-between relative">
+      <div className="max-w-[1440px] mx-auto h-20 px-4 sm:px-6 lg:px-8 flex items-center justify-between relative">
         {/* Brand Logo Image */}
         <a href="#hero" className="flex items-center gap-4 group shrink-0">
           <img
             src="/images/logo full.png"
             alt={siteConfig.name}
-            className="h-11 sm:h-13 w-auto object-contain hover:opacity-90 transition-opacity"
+            className="h-9 sm:h-13 w-auto object-contain hover:opacity-90 transition-opacity"
           />
         </a>
 

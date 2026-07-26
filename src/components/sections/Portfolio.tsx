@@ -39,7 +39,7 @@ export const Portfolio: React.FC = () => {
     <section id="portofolio" className="w-full bg-[#0E0E0E] text-slate-100 relative overflow-hidden selection:bg-white selection:text-slate-950">
       
       {/* 1. Header Section */}
-      <div className="relative px-6 lg:px-8 pt-24 pb-12 max-w-[1440px] mx-auto flex flex-col items-start">
+      <div className="relative px-4 sm:px-6 lg:px-8 pt-16 sm:pt-24 pb-8 sm:pb-12 max-w-[1440px] mx-auto flex flex-col items-start">
         {/* Background Large Watermark */}
         <div className="absolute top-16 right-8 opacity-10 select-none pointer-events-none hidden lg:block">
           <span className="font-extrabold text-[12vw] leading-none tracking-tighter text-white mix-blend-overlay">
@@ -52,13 +52,13 @@ export const Portfolio: React.FC = () => {
             04 // PORTFOLIO
           </span>
           <div className="max-w-2xl">
-            <h1 className="text-4xl sm:text-6xl font-extrabold text-white tracking-tighter leading-[1.05] mb-6">
+            <h1 className="text-3xl sm:text-6xl font-extrabold text-white tracking-tighter leading-[1.05] mb-4 sm:mb-6">
               Karya{" "}
               <span className="[-webkit-text-stroke:1px_rgba(255,255,255,0.4)] text-transparent">
                 Terpilih
               </span>
             </h1>
-            <p className="text-slate-400 text-base sm:text-lg leading-relaxed font-normal">
+            <p className="text-slate-400 text-sm sm:text-lg leading-relaxed font-normal">
               Koleksi proyek yang mendefinisikan standar baru dalam estetika digital dan fungsionalitas teknis.
             </p>
           </div>
@@ -66,15 +66,15 @@ export const Portfolio: React.FC = () => {
       </div>
 
       {/* 2. Category Filter Pills */}
-      <div className="px-6 lg:px-8 mb-12 max-w-[1440px] mx-auto">
-        <div className="flex flex-wrap items-center gap-3">
+      <div className="px-4 sm:px-6 lg:px-8 mb-8 sm:mb-12 max-w-[1440px] mx-auto">
+        <div className="flex flex-wrap items-center gap-2 sm:gap-3">
           {categories.map((cat) => {
             const isActive = selectedCategory === cat;
             return (
               <button
                 key={cat}
                 onClick={() => setSelectedCategory(cat)}
-                className={`px-6 py-2.5 rounded-full text-xs font-semibold transition-all duration-300 font-mono tracking-wider ${
+                className={`px-4 sm:px-6 py-2 sm:py-2.5 rounded-full text-[11px] sm:text-xs font-semibold transition-all duration-300 font-mono tracking-wider ${
                   isActive
                     ? 'bg-white text-slate-950 font-bold scale-105 shadow-[0_0_20px_rgba(255,255,255,0.2)]'
                     : 'bg-[#1A1A1A] border border-[#333333] text-slate-400 hover:text-white hover:border-white/30'

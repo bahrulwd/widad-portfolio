@@ -32,8 +32,8 @@ export const Contact: React.FC = () => {
   };
 
   return (
-    <section id="kontak" className="py-24 relative overflow-hidden bg-[#0e0e0e]">
-      <div className="max-w-[1440px] mx-auto px-6 lg:px-8 relative z-10">
+    <section id="kontak" className="py-16 sm:py-24 relative overflow-hidden bg-[#0e0e0e]">
+      <div className="max-w-[1440px] mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         {/* Header */}
         <div className="text-center max-w-3xl mx-auto mb-16">
           <Badge variant="emerald" icon={<Sparkles className="w-3.5 h-3.5" />}>
