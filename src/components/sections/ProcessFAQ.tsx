@@ -121,17 +121,20 @@ export const ProcessFAQ: React.FC = () => {
         </div>
       </section>
 
-      {/* SECTION: 06 // VOICES (Word Wrapped Grid for Clean UX) */}
-      <section className="bg-[#0e0e0e] py-24 border-t border-white/5">
-        <div className="max-w-[1440px] mx-auto px-6 lg:px-8">
+      {/* SECTION: 06 // VOICES & PRODUCT FOCUS */}
+      <section className="bg-[#0e0e0e] py-16 sm:py-24 border-t border-white/5">
+        <div className="max-w-[1440px] mx-auto px-4 sm:px-6 lg:px-8">
 
           <div className="mb-12">
             <span className="text-xs font-semibold text-slate-400 tracking-[0.4em] uppercase block font-mono">
-              06 // TESTIMONIALS
+              06 // TESTIMONIALS & REVIEWS
             </span>
-            <h2 className="text-4xl sm:text-6xl font-extrabold text-white mt-3 tracking-tight">
+            <h2 className="text-3xl sm:text-6xl font-extrabold text-white mt-3 tracking-tight">
               Voices of Trust.
             </h2>
+            <p className="text-slate-400 text-sm sm:text-base mt-3 max-w-xl">
+              Ulasan nyata dari mitra klien serta fokus riset pengembangan produk independen.
+            </p>
           </div>
 
           {/* Grid Layout with Word Wrapping */}
@@ -139,10 +142,25 @@ export const ProcessFAQ: React.FC = () => {
             {testimonialsList.map((testi) => (
               <div
                 key={testi.id}
-                className="bg-[#1A1A1A] border border-[#333333] p-8 flex flex-col justify-between gap-6 rounded-2xl hover:border-white/30 transition-all duration-300 shadow-lg"
+                className={`bg-[#1A1A1A] border ${
+                  testi.type === "Client Review"
+                    ? "border-emerald-500/40 bg-gradient-to-b from-[#1A1A1A] to-[#121c17]"
+                    : "border-[#333333]"
+                } p-6 sm:p-8 flex flex-col justify-between gap-6 rounded-2xl hover:border-white/30 transition-all duration-300 shadow-lg`}
               >
                 <div className="space-y-4">
-                  <Quote className="w-8 h-8 text-white/20" />
+                  <div className="flex items-center justify-between">
+                    <Quote className="w-8 h-8 text-white/20" />
+                    <span
+                      className={`text-[10px] font-mono px-3 py-1 rounded-full uppercase tracking-wider ${
+                        testi.type === "Client Review"
+                          ? "bg-emerald-500/20 text-emerald-300 border border-emerald-500/30"
+                          : "bg-white/5 text-slate-400 border border-white/10"
+                      }`}
+                    >
+                      {testi.type === "Client Review" ? "Klien Terverifikasi" : "Proyek Mandiri"}
+                    </span>
+                  </div>
                   <p className="text-slate-200 text-sm sm:text-base italic leading-relaxed break-words">
                     "{testi.quote}"
                   </p>

@@ -52,6 +52,7 @@ export const pricingPackages: ServicePackage[] = [
 
 export interface TestimonialItem {
   id: string;
+  type: "Client Review" | "Independent Project";
   quote: string;
   author: string;
   role: string;
@@ -60,21 +61,24 @@ export interface TestimonialItem {
 export const testimonialsList: TestimonialItem[] = [
   {
     id: "1",
-    quote: "Transformasi digital yang mereka bawa ke perusahaan kami bukan sekadar update teknologi, tapi perubahan fundamental pada efisiensi operasional kami.",
-    author: "Adrian Wijaya",
-    role: "CTO, Nexus Corp",
+    type: "Client Review",
+    quote: "Sistem Company Profile dan CMS yang dibangun oleh Widad sangat modern, responsif, dan fungsional. Membantu menyajikan kredibilitas bisnis kami secara prestisius serta mempermudah pengelolaan data proyek dan pelacakan prospek klien secara terstruktur.",
+    author: "Ahmad Qoidunnas",
+    role: "Executive Director — CV. Kencana Adhi Saka",
   },
   {
     id: "2",
-    quote: "Presisi dan perhatian terhadap detail adalah apa yang membedakan MBW. Mereka mengerti kebutuhan teknis yang sangat kompleks tanpa banyak kompromi.",
-    author: "Santi Permata",
-    role: "Product Owner, Fintech ID",
+    type: "Independent Project",
+    quote: "Platform behavioral finance mandiri yang dirancang untuk membedah pola impulse buying dan menyediakan Decision Support System (DSS) serta skenario simulasi keputusan keuangan bagi pengguna.",
+    author: "Arthara Platform",
+    role: "Self-Initiated Financial DSS",
   },
   {
     id: "3",
-    quote: "Kecepatan eksekusi yang luar biasa. Dari konsep hingga deployment hanya memakan waktu setengah dari estimasi vendor kami sebelumnya.",
-    author: "Budi Santoso",
-    role: "CEO, Creative Flow",
+    type: "Independent Project",
+    quote: "Riset dan pengembangan sistem operasi produktivitas mandiri yang mengintegrasikan Smart Priority Scoring, analitik real-time Recharts, dan arsitektur REST API berkinerja tinggi.",
+    author: "Nexa SaaS",
+    role: "Self-Initiated Productivity System",
   },
 ];
 
