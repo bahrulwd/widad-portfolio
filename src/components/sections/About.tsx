@@ -1,5 +1,5 @@
 import React, { useEffect, useState, useRef } from 'react';
-import { Palette, School, Code2, Cpu, Sparkles, Compass } from 'lucide-react';
+import { Palette, School } from 'lucide-react';
 
 export const About: React.FC = () => {
   const [projectCount, setProjectCount] = useState(0);
@@ -88,8 +88,7 @@ export const About: React.FC = () => {
 
           {/* Development Philosophy Highlight Block */}
           <div className="pt-10 border-t border-white/5">
-            <div className="flex items-center gap-2 mb-8">
-              <Compass className="w-5 h-5 text-white" />
+            <div className="mb-8">
               <h3 className="text-xl sm:text-2xl font-bold text-white tracking-tight">
                 My Development Philosophy
               </h3>
@@ -101,8 +100,7 @@ export const About: React.FC = () => {
                 <div className="w-10 h-10 rounded-lg bg-white/5 border border-white/10 flex items-center justify-center text-slate-300 font-mono font-bold text-sm mb-5 group-hover:border-white/30 transition-colors">
                   01
                 </div>
-                <h4 className="text-lg font-bold text-white mb-2 flex items-center gap-2">
-                  <Cpu className="w-4 h-4 text-slate-300" />
+                <h4 className="text-lg font-bold text-white mb-2">
                   Simple Architecture
                 </h4>
                 <p className="text-sm text-slate-400 leading-relaxed">
@@ -115,8 +113,7 @@ export const About: React.FC = () => {
                 <div className="w-10 h-10 rounded-lg bg-white/5 border border-white/10 flex items-center justify-center text-slate-300 font-mono font-bold text-sm mb-5 group-hover:border-white/30 transition-colors">
                   02
                 </div>
-                <h4 className="text-lg font-bold text-white mb-2 flex items-center gap-2">
-                  <Code2 className="w-4 h-4 text-slate-300" />
+                <h4 className="text-lg font-bold text-white mb-2">
                   Clean & Type-Safe Code
                 </h4>
                 <p className="text-sm text-slate-400 leading-relaxed">
@@ -129,8 +126,7 @@ export const About: React.FC = () => {
                 <div className="w-10 h-10 rounded-lg bg-white/5 border border-white/10 flex items-center justify-center text-slate-300 font-mono font-bold text-sm mb-5 group-hover:border-white/30 transition-colors">
                   03
                 </div>
-                <h4 className="text-lg font-bold text-white mb-2 flex items-center gap-2">
-                  <Sparkles className="w-4 h-4 text-slate-300" />
+                <h4 className="text-lg font-bold text-white mb-2">
                   Business-Driven UX
                 </h4>
                 <p className="text-sm text-slate-400 leading-relaxed">
