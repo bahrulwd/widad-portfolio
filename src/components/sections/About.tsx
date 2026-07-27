@@ -53,9 +53,6 @@ export const About: React.FC = () => {
               <h2 className="text-3xl sm:text-5xl font-extrabold text-white tracking-tight mb-4">
                 Tentang Saya
               </h2>
-              <p className="text-slate-400 text-sm font-mono leading-relaxed">
-                Kombinasi antara arsitektur perangkat lunak yang kokoh dan desain antarmuka yang presisi.
-              </p>
             </div>
 
             {/* Right Narrative */}
