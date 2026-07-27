@@ -158,7 +158,7 @@ export const Hero: React.FC = () => {
           {/* Bento Stats / Metric Pills */}
           <div className="grid grid-cols-2 sm:grid-cols-4 gap-3 sm:gap-4 w-full max-w-3xl mb-12">
             {[
-              { label: "Projects Delivered", val: "50+" },
+              { label: "Projects Delivered", val: "5+" },
               { label: "Client Satisfaction", val: "99%" },
               { label: "Lighthouse Score", val: "100" },
               { label: "Response Time", val: "< 24h" },

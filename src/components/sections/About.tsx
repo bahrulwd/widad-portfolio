@@ -13,7 +13,7 @@ export const About: React.FC = () => {
           if (entry.isIntersecting && !hasAnimated) {
             setHasAnimated(true);
             let count = 0;
-            const target = 50;
+            const target = 5;
             const duration = 2000;
             const increment = target / (duration / 16);
             const timer = setInterval(() => {

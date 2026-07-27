@@ -49,7 +49,7 @@ export const siteConfig: SiteConfig = {
     whatsapp: "https://wa.me/6282147967841?text=Halo%20Muhammad%20Bahrul%20Widad,%20saya%20ingin%20berkonsultasi%20mengenai%20proyek%20web",
   },
   stats: [
-    { label: "Projects Delivered", value: "50+", numericValue: 50 },
+    { label: "Projects Delivered", value: "5+", numericValue: 5 },
     { label: "Client Satisfaction", value: "99%", numericValue: 99 },
   ],
 };
