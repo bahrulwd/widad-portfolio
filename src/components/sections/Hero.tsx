@@ -88,7 +88,7 @@ export const Hero: React.FC = () => {
               <span className="h-1.5 w-1.5 rounded-full bg-emerald-400 animate-pulse" />
               Currently Building:
             </span>
-            <span className="text-slate-200 font-medium">Nexa (Productivity OS) & Custom CMS</span>
+            <span className="text-slate-200 font-medium">{siteConfig.currentlyBuilding ?? "Sevora — Helpdesk & Service Management"}</span>
           </div>
         </motion.div>
 

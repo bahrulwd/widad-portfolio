@@ -12,6 +12,7 @@ export interface SiteConfig {
   location: string;
   availableForFreelance: boolean;
   availabilityText: string;
+  currentlyBuilding?: string;
   cvUrl?: string;
   socials: {
     github: string;
@@ -41,6 +42,7 @@ export const siteConfig: SiteConfig = {
   location: "Gunungpati, Semarang, Indonesia",
   availableForFreelance: true,
   availabilityText: "Available for Q4 Projects",
+  currentlyBuilding: "Sevora — Helpdesk & Service Management",
   cvUrl: "/CV_Muhammad_Bahrul_Widad.pdf",
   socials: {
     github: "https://github.com/bahrulwd",
