@@ -1,52 +1,114 @@
 export interface ServicePackage {
   id: string;
   name: string;
+  description: string;
   badge?: string;
   priceLabel: string;
+  pricePrefix?: string;
   priceValue: string;
   featured?: boolean;
+  deliveryTime: string;
+  revisionInfo: string;
+  featuresHeader: string;
   features: string[];
+  waMessage: string;
 }
 
 export const pricingPackages: ServicePackage[] = [
   {
     id: "landing-page",
-    name: "Paket Landing Page",
+    name: "Landing Page",
+    description: "Cocok untuk promosi produk, event, atau bisnis personal yang ingin tampil profesional & cepat konversi.",
     priceLabel: "Mulai dari",
-    priceValue: "Rp 1.500.000",
+    pricePrefix: "Rp",
+    priceValue: "800.000",
+    deliveryTime: "2 – 4 Hari Kerja",
+    revisionInfo: "2x Revisi Minor",
+    featuresHeader: "Yang Termasuk:",
     features: [
-      "1 Halaman Teroptimasi",
-      "Responsive Design (Mobile First)",
-      "SEO Friendly Structure",
-      "WhatsApp Integration",
+      "1 Halaman Focus-Conversion",
+      "Desain Responsif (Desktop & Mobile)",
+      "Formulir / Direct WhatsApp CTA",
+      "Bantuan Setup Hosting (Vercel/Free Tier)",
+      "SEO Basic & Speed Optimization",
+      "Garansi Bug-Fix & Support 30 Hari",
     ],
+    waMessage: "Halo Widad, saya tertarik dengan Paket Landing Page (Rp 800.000). Bisa konsultasi lebih lanjut?",
   },
   {
     id: "company-profile",
     name: "Company Profile",
-    badge: "Most Popular",
-    priceLabel: "",
-    priceValue: "Harga Tetap",
+    description: "Solusi lengkap untuk bisnis & perusahaan yang ingin memperkuat kredibilitas serta mengelola konten secara mandiri.",
+    badge: "Paling Populer",
+    priceLabel: "Mulai dari",
+    pricePrefix: "Rp",
+    priceValue: "3.000.000",
     featured: true,
+    deliveryTime: "7 – 14 Hari Kerja",
+    revisionInfo: "3x Revisi Desain & Konten",
+    featuresHeader: "Semua di Landing Page, plus:",
     features: [
-      "Up to 5 Halaman Utama",
-      "CMS Dasar (Update Mandiri)",
-      "Custom Design System",
-      "Email Bisnis (Google/Zoho)",
-      "Free Hosting & Domain (1yr)",
+      "Hingga 5 Halaman Utama Bisnis",
+      "Desain Custom Sesuai Brand Identity",
+      "Panel Admin CMS + Video Tutorial Penggunaan",
+      "Free Domain (.com/.id) & Hosting (1 Tahun)",
+      "Integrasi Google Analytics & Optimasi SEO",
+      "Garansi Bug-Fix & Support 30 Hari",
     ],
+    waMessage: "Halo Widad, saya tertarik dengan Paket Company Profile (Rp 3.000.000). Bisa konsultasi lebih lanjut?",
   },
   {
     id: "custom-website",
     name: "Website Custom",
-    priceLabel: "",
-    priceValue: "Penawaran Khusus",
+    description: "Untuk aplikasi bisnis khusus, sistem manajemen data, integrasi API, atau platform dengan alur unik.",
+    priceLabel: "Penawaran Khusus",
+    pricePrefix: "",
+    priceValue: "Custom Price",
+    deliveryTime: "Sesuai Scope Proyek",
+    revisionInfo: "Revisi Fleksibel (Per Milestone)",
+    featuresHeader: "Semua di Company Profile, plus:",
     features: [
-      "Fitur Kompleks & Logic",
-      "Integrasi API Pihak Ketiga",
-      "Dashboard Admin Eksklusif",
-      "Support Prioritas 24/7",
+      "Fitur & Logika Bisnis Khusus (Custom Logic)",
+      "Integrasi API & Database Pihak Ke-3",
+      "Dashboard Admin & Analytics Data",
+      "Arsitektur Skalabel & High Performance",
+      "Konsultasi Fitur & Garansi Maintenance Prioritas",
     ],
+    waMessage: "Halo Widad, saya ingin konsultasi mengenai Paket Website Custom. Bisa minta jadwal diskusi?",
+  },
+];
+
+export interface AddOnItem {
+  id: string;
+  name: string;
+  price: string;
+  description: string;
+}
+
+export const addOnsList: AddOnItem[] = [
+  {
+    id: "extra-page",
+    name: "Tambah Halaman Ekstra",
+    price: "+ Rp 250rb / Halaman",
+    description: "Penambahan halaman struktur baru di luar kuota paket utama.",
+  },
+  {
+    id: "payment-gateway",
+    name: "Integrasi Payment Gateway",
+    price: "+ Rp 1.000.000",
+    description: "Otomatisasi pembayaran QRIS, Virtual Account, & Kartu Kredit (Midtrans/Xendit).",
+  },
+  {
+    id: "multi-language",
+    name: "Fitur Multi-Bahasa",
+    price: "+ Rp 500rb",
+    description: "Dukungan 2+ bahasa (Indonesian & English) untuk jangkauan pasar internasional.",
+  },
+  {
+    id: "annual-maintenance",
+    name: "Maintenance Tahunan",
+    price: "+ Rp 750rb / Tahun",
+    description: "Perpanjangan domain, hosting, backup berkala & monitoring server pasca tahun ke-1.",
   },
 ];
 

@@ -8,14 +8,38 @@ import {
   Users,
   Wand2,
   CheckCircle2,
-  Check,
   ArrowRight,
-  Sparkles
+  Sparkles,
+  Clock,
+  RotateCcw,
+  FilePlus,
+  CreditCard,
+  Globe,
+  PlusCircle,
 } from 'lucide-react';
-import { pricingPackages } from '../../data/services';
+import { pricingPackages, addOnsList } from '../../data/services';
 import { siteConfig } from '../../data/config';
 
 export const Services: React.FC = () => {
+  const getWaLink = (message: string) => {
+    return `https://wa.me/6282147967841?text=${encodeURIComponent(message)}`;
+  };
+
+  const getAddOnIcon = (id: string) => {
+    switch (id) {
+      case 'extra-page':
+        return <FilePlus className="w-5 h-5 text-white" />;
+      case 'payment-gateway':
+        return <CreditCard className="w-5 h-5 text-white" />;
+      case 'multi-language':
+        return <Globe className="w-5 h-5 text-white" />;
+      case 'annual-maintenance':
+        return <ShieldCheck className="w-5 h-5 text-white" />;
+      default:
+        return <PlusCircle className="w-5 h-5 text-white" />;
+    }
+  };
+
   return (
     <section id="layanan" className="w-full bg-[#0e0e0e] text-slate-100">
 
@@ -45,7 +69,7 @@ export const Services: React.FC = () => {
             <div className="flex justify-between items-start">
               <div>
                 <span className="px-3.5 py-1 rounded-full border border-white/20 text-xs font-mono text-slate-300 uppercase tracking-wider mb-6 inline-block">
-                  UMKM & Startups
+                  UMKM &amp; Startups
                 </span>
                 <h3 className="text-3xl font-extrabold text-white mb-4 tracking-tight">
                   Landing Page
@@ -80,7 +104,7 @@ export const Services: React.FC = () => {
             <div className="mt-8">
               <h3 className="text-2xl font-bold text-white mb-3">Portofolio</h3>
               <p className="text-slate-400 text-sm leading-relaxed">
-                Showcase karya & identitas profesional Anda dengan layout yang bercerita.
+                Showcase karya &amp; identitas profesional Anda dengan layout yang bercerita.
               </p>
             </div>
           </div>
@@ -101,7 +125,7 @@ export const Services: React.FC = () => {
             </div>
           </div>
 
-          {/* Custom Website (4 cols - Highlighted White Card) */}
+          {/* Custom Website (4 cols - Highlighted Card) */}
           <div className="md:col-span-4 group bg-white text-slate-950 p-8 sm:p-10 flex flex-col justify-between hover:opacity-95 transition-all duration-500 rounded-2xl shadow-xl">
             <div className="flex justify-between items-start text-slate-950">
               <Terminal className="w-8 h-8" />
@@ -138,7 +162,7 @@ export const Services: React.FC = () => {
             <div className="flex-1">
               <h3 className="text-2xl font-bold text-white mb-3">Website Organisasi</h3>
               <p className="text-slate-400 text-sm mb-6 leading-relaxed">
-                Manajemen konten & anggota untuk komunitas atau instansi.
+                Manajemen konten &amp; anggota untuk komunitas atau instansi.
               </p>
               <div className="flex flex-wrap gap-2">
                 <span className="px-2.5 py-1 bg-[#353534] text-[10px] text-white uppercase tracking-wider font-mono rounded">
@@ -159,7 +183,7 @@ export const Services: React.FC = () => {
             <div className="flex-1">
               <h3 className="text-2xl font-bold text-white mb-3">Redesign Service</h3>
               <p className="text-slate-400 text-sm mb-6 leading-relaxed">
-                Penyegaran tampilan & optimasi UX untuk website lama Anda.
+                Penyegaran tampilan &amp; optimasi UX untuk website lama Anda.
               </p>
               <div className="flex flex-wrap gap-2">
                 <span className="px-2.5 py-1 bg-[#353534] text-[10px] text-white uppercase tracking-wider font-mono rounded">
@@ -179,73 +203,189 @@ export const Services: React.FC = () => {
       </div>
 
       {/* 2. Pricing Packages Section */}
-      <div className="w-full bg-[#1c1b1b] py-24 relative overflow-hidden border-t border-white/5">
-        <div className="absolute top-0 left-1/4 w-[500px] h-[500px] bg-white/5 blur-[150px] rounded-full pointer-events-none" />
+      <div className="w-full bg-[#1c1b1b] py-20 sm:py-28 border-t border-white/5 relative">
+        <div className="max-w-[1440px] mx-auto px-4 sm:px-6 lg:px-8">
 
-        <div className="max-w-[1440px] mx-auto px-6 lg:px-8">
-
-          <div className="text-center mb-20">
+          {/* Section Title */}
+          <div className="text-center mb-16 sm:mb-20">
             <span className="text-xs font-semibold uppercase tracking-[0.4em] text-slate-400 mb-4 block font-mono">
-              Paket Layanan
+              Paket &amp; Investasi
             </span>
             <h2 className="text-4xl sm:text-6xl font-extrabold text-white tracking-tight">
-              Pilih Paket Anda
+              Pilih Paket Sesuai Kebutuhan
             </h2>
           </div>
 
+          {/* Pricing Cards Grid */}
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 items-stretch">
             {pricingPackages.map((pkg) => (
               <div
                 key={pkg.id}
-                className={`relative p-8 sm:p-10 flex flex-col h-full rounded-2xl transition-all duration-300 ${pkg.featured
-                    ? 'bg-[#1A1A1A] border-2 border-white transform lg:-translate-y-4 shadow-2xl'
-                    : 'bg-[#1A1A1A] border border-[#333333] hover:border-white/30'
-                  }`}
+                className={`relative flex flex-col justify-between rounded-2xl p-8 sm:p-10 transition-all duration-500 ${
+                  pkg.featured
+                    ? 'bg-white text-slate-950 shadow-2xl lg:-translate-y-4 border border-white hover:-translate-y-5 hover:shadow-[0_25px_50px_rgba(255,255,255,0.18)]'
+                    : 'bg-[#1A1A1A] border border-[#333333] hover:border-white/40 text-slate-100 hover:-translate-y-2 hover:shadow-[0_20px_40px_rgba(0,0,0,0.6)]'
+                }`}
               >
-                {pkg.badge && (
-                  <div className="absolute -top-4 left-1/2 -translate-x-1/2 bg-white text-slate-950 px-6 py-1 text-xs font-bold uppercase tracking-widest rounded-full font-mono shadow-md">
-                    {pkg.badge}
+                {/* Floating Top Badge */}
+                {pkg.featured && pkg.badge && (
+                  <div className="absolute -top-3.5 left-1/2 -translate-x-1/2 bg-emerald-500 text-slate-950 text-[11px] font-extrabold uppercase tracking-widest px-4 py-1.5 rounded-full font-mono shadow-lg shadow-emerald-500/30 flex items-center gap-1.5 z-20">
+                    <Sparkles className="w-3.5 h-3.5 fill-slate-950" />
+                    <span>{pkg.badge}</span>
                   </div>
                 )}
 
-                <div className="mb-10">
-                  <h4 className="text-2xl font-bold text-white mb-2">{pkg.name}</h4>
-                  <div className="flex items-baseline gap-2 mt-4">
-                    {pkg.priceLabel && (
-                      <span className="text-slate-400 text-sm font-medium">{pkg.priceLabel}</span>
-                    )}
-                    <span className="text-2xl font-extrabold text-white">{pkg.priceValue}</span>
+                {/* Header & Description */}
+                <div>
+                  <h3 className={`text-2xl sm:text-3xl font-extrabold mb-2 tracking-tight ${
+                    pkg.featured ? 'text-slate-950' : 'text-white'
+                  }`}>
+                    {pkg.name}
+                  </h3>
+
+                  <p className={`text-sm leading-relaxed mb-5 min-h-[44px] ${
+                    pkg.featured ? 'text-slate-600' : 'text-slate-400'
+                  }`}>
+                    {pkg.description}
+                  </p>
+
+                  <div className="flex flex-wrap items-center gap-2 mb-8 font-mono text-[11px]">
+                    <span className={`px-3 py-1 rounded-full flex items-center gap-1.5 font-semibold ${
+                      pkg.featured
+                        ? 'bg-slate-100 text-slate-800 border border-slate-200'
+                        : 'bg-[#242424] text-slate-300 border border-white/5'
+                    }`}>
+                      <Clock className="w-3.5 h-3.5 opacity-70" />
+                      <span>{pkg.deliveryTime}</span>
+                    </span>
+                    <span className={`px-3 py-1 rounded-full flex items-center gap-1.5 font-semibold ${
+                      pkg.featured
+                        ? 'bg-slate-100 text-slate-800 border border-slate-200'
+                        : 'bg-[#242424] text-slate-300 border border-white/5'
+                    }`}>
+                      <RotateCcw className="w-3.5 h-3.5 opacity-70" />
+                      <span>{pkg.revisionInfo}</span>
+                    </span>
                   </div>
                 </div>
 
-                <ul className="flex flex-col gap-4 mb-12 flex-grow">
-                  {pkg.features.map((feat, fIdx) => (
-                    <li key={fIdx} className="flex items-center gap-3 text-slate-300 text-sm">
-                      <CheckCircle2 className="w-5 h-5 text-white shrink-0" />
-                      <span>{feat}</span>
-                    </li>
-                  ))}
-                </ul>
+                {/* Price Display & CTA Button */}
+                <div>
+                  <div className="mb-6">
+                    {pkg.priceLabel && (
+                      <span className={`text-[11px] font-mono font-semibold uppercase tracking-wider block mb-1 ${
+                        pkg.featured ? 'text-slate-500' : 'text-slate-400'
+                      }`}>
+                        {pkg.priceLabel}
+                      </span>
+                    )}
+                    <div className="flex items-baseline">
+                      {pkg.pricePrefix && (
+                        <span className={`text-lg sm:text-xl font-bold tracking-normal mr-1.5 align-top ${
+                          pkg.featured ? 'text-slate-800' : 'text-slate-300'
+                        }`}>
+                          {pkg.pricePrefix}
+                        </span>
+                      )}
+                      <span className={`text-4xl sm:text-5xl font-extrabold tracking-tight ${
+                        pkg.featured ? 'text-slate-950' : 'text-white'
+                      }`}>
+                        {pkg.priceValue}
+                      </span>
+                    </div>
+                  </div>
 
-                <a
-                  href={siteConfig.socials.whatsapp}
-                  target="_blank"
-                  rel="noreferrer"
-                  className={`w-full py-4 rounded-full font-bold text-xs uppercase tracking-widest text-center transition-all duration-300 ${pkg.featured
-                      ? 'bg-white text-slate-950 hover:bg-emerald-400 shadow-lg'
-                      : 'border border-white text-white hover:bg-white hover:text-slate-950'
+                  <a
+                    href={getWaLink(pkg.waMessage)}
+                    target="_blank"
+                    rel="noreferrer"
+                    className={`w-full py-4 rounded-full font-bold text-xs uppercase tracking-widest text-center transition-all duration-300 block hover:scale-[1.02] active:scale-[0.98] ${
+                      pkg.featured
+                        ? 'bg-slate-950 text-white hover:bg-emerald-400 hover:text-slate-950 shadow-lg'
+                        : 'border border-white/20 text-white hover:bg-white hover:text-slate-950'
                     }`}
-                >
-                  {pkg.id === 'custom-website' ? 'Tanya Penawaran' : 'Konsultasi Sekarang'}
-                </a>
+                  >
+                    {pkg.id === 'custom-website' ? 'Tanya Penawaran' : 'Konsultasi Sekarang'}
+                  </a>
+
+                  <div className={`w-full h-[1px] my-8 ${
+                    pkg.featured ? 'bg-slate-950/10' : 'bg-white/10'
+                  }`} />
+                </div>
+
+                {/* Features List */}
+                <div className="flex-grow">
+                  <p className={`text-xs font-bold uppercase tracking-wider mb-4 font-mono ${
+                    pkg.featured ? 'text-slate-950' : 'text-slate-300'
+                  }`}>
+                    {pkg.featuresHeader}
+                  </p>
+                  <ul className="flex flex-col gap-3.5">
+                    {pkg.features.map((feat, fIdx) => (
+                      <li key={fIdx} className={`flex items-start gap-3 text-sm leading-snug ${
+                        pkg.featured ? 'text-slate-800 font-medium' : 'text-slate-300'
+                      }`}>
+                        <CheckCircle2 className={`w-4 h-4 shrink-0 mt-0.5 ${
+                          pkg.featured ? 'text-slate-950' : 'text-white opacity-80'
+                        }`} />
+                        <span>{feat}</span>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+
               </div>
             ))}
           </div>
 
+          {/* 3. Add-On Services Section (Flexible Upsell Options) */}
+          <div className="mt-20 sm:mt-24 pt-12 border-t border-white/10">
+            <div className="flex flex-col md:flex-row justify-between items-start md:items-end mb-10 gap-4">
+              <div>
+                <span className="text-xs font-semibold uppercase tracking-[0.3em] text-slate-400 font-mono block mb-2">
+                  Fleksibilitas Proyek
+                </span>
+                <h3 className="text-2xl sm:text-4xl font-extrabold text-white tracking-tight">
+                  Layanan Tambahan (Add-Ons)
+                </h3>
+              </div>
+              <p className="text-slate-400 text-sm max-w-md">
+                Dapat ditambahkan ke paket manapun sesuai kebutuhan spesifik bisnis Anda.
+              </p>
+            </div>
+
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+              {addOnsList.map((addon) => (
+                <div
+                  key={addon.id}
+                  className="bg-[#1A1A1A] border border-[#333333] hover:border-white/30 p-6 sm:p-7 rounded-2xl transition-all duration-300 flex flex-col justify-between group"
+                >
+                  <div>
+                    <div className="flex justify-between items-start mb-4">
+                      <div className="p-2.5 rounded-xl bg-white/5 border border-white/10 group-hover:border-white/30 transition-colors">
+                        {getAddOnIcon(addon.id)}
+                      </div>
+                      <span className="text-[11px] font-mono font-extrabold text-emerald-400 bg-emerald-500/10 border border-emerald-500/20 px-2.5 py-1 rounded-full">
+                        {addon.price}
+                      </span>
+                    </div>
+
+                    <h4 className="text-base font-bold text-white mb-2 tracking-tight">
+                      {addon.name}
+                    </h4>
+                    <p className="text-xs text-slate-400 leading-relaxed">
+                      {addon.description}
+                    </p>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+
           {/* FAQ Teaser */}
-          <div className="mt-28 border-t border-white/10 pt-12 flex flex-col md:flex-row justify-between items-center gap-6">
+          <div className="mt-20 border-t border-white/10 pt-12 flex flex-col md:flex-row justify-between items-center gap-6">
             <p className="text-slate-400 text-base">
-              Butuh solusi yang tidak ada di daftar di atas?
+              Butuh solusi kustom yang tidak ada di daftar di atas?
             </p>
             <a
               href="#kontak"
